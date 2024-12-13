@@ -27,22 +27,19 @@ temp = *a;
 size_t partition(int *array, size_t low, size_t high, size_t size)
 {
 int pivot = array[high];
-size_t i = low;
-size_t j;
-size_t k;
+int j;
+int i = low;
 for (j = low; j < high; j++)
 {
 if (array[j] < pivot)
 {
 swap(&array[i], &array[j]);
+print_array(array, sizeof(array) / sizeof(array[0]));
 i++;
 }
 }
 swap(&array[i], &array[high]);
-for (k = 0; k < size; k++)
-{
-printf("%d%s", array[k], k < size - 1 ? ", " : "\n");
-}
+print_array(array, sizeof(array) / sizeof(array[0]));
 return (i);
 }
 

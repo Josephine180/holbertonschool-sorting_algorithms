@@ -37,7 +37,7 @@ i++;
 }
 swap(&array[i], &array[high]);
 for (k = 0; k < size; k++)
-printf("%d%s", array[k], k < size - 1 ? ", " : "\n");
+print_array(array, size);
 return (i);
 }
 /**
